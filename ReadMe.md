@@ -1,4 +1,4 @@
-![favicon](public/favicon.png)
+![favicon](public/favicons.png)
 
 ## Система обліку результатів учнівської олімпіади з програмування
 ---
