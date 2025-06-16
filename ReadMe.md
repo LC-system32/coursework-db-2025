@@ -1,4 +1,7 @@
-![favicon](/programming-olympiad/public/favicon.png)
+<p align="center">
+  <img src="/programming-olympiad/public/favicon.png" alt="favicon" width="100" />
+</p>
+
 
 ## Система обліку результатів учнівської олімпіади з програмування
 ---
