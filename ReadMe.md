@@ -1,4 +1,4 @@
-<link rel="icon" href="'programming-olympiad/public/favicon.ico" type="image/x-icon">
+![favicon](public/favicon.png)
 
 ## Система обліку результатів учнівської олімпіади з програмування
 ---
