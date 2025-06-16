@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 
 class TablesController extends Controller
 {
-    protected $apiBaseUrl = 'http://localhost:3000/tables';
+    protected $apiBaseUrl = 'https://programing-olympiad.ddns.net:3000/tables';
 
     public function index()
     {

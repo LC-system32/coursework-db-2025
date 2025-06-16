@@ -1,19 +1,27 @@
+const fs = require('fs');
+const https = require('https');
 const express = require('express');
 const bcrypt = require('bcrypt');
 const { Pool } = require('pg');
 const multer = require('multer');
-const fs = require('fs');
-const upload = multer({ dest: 'uploads/' });
-
-const app = express();
-app.use(express.json());
 const cors = require('cors');
 
+const upload = multer({ dest: 'uploads/' });
+const app = express();
+app.use(express.json());
+
 app.use(cors({
-    origin: 'http://localhost', // або '*' для будь-якого домену
+    origin: 'https://programing-olympiad.ddns.net',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
+const options = {
+    key: fs.readFileSync('./certs/programing-olympiad.ddns.net-key.pem'),
+    cert: fs.readFileSync('./certs/programing-olympiad.ddns.net-crt.pem'),
+    ca: fs.readFileSync('./certs/programing-olympiad.ddns.net-chain.pem'),
+};
+
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
@@ -495,4 +503,6 @@ app.delete('/:table/:id', async (req, res) => {
 });
 
 
-app.listen(3000, () => console.log('API працює на http://localhost:3000'));
+https.createServer(options, app).listen(3000, () => {
+    console.log('HTTPS API працює на https://programing-olympiad.ddns.net:3000');
+});

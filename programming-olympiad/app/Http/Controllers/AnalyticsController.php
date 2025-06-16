@@ -14,7 +14,7 @@ class AnalyticsController extends Controller
 
     public function submissions()
     {
-        $response = Http::get('http://localhost:3000/api/analytics/submissions');
+        $response = Http::get('https://programing-olympiad.ddns.net:3000/api/analytics/submissions');
         $data = $response->json();
 
         if (!$response->successful() || !$data['success']) {
@@ -44,7 +44,7 @@ class AnalyticsController extends Controller
 
     public function teachers()
     {
-        $response = Http::get('http://localhost:3000/api/analytics/teachers');
+        $response = Http::get('https://programing-olympiad.ddns.net:3000/api/analytics/teachers');
         $analytics = $response->json();
 
         if (!$response->successful() || !$analytics['success']) {
@@ -81,7 +81,7 @@ class AnalyticsController extends Controller
 
     public function participants()
     {
-        $response = Http::get('http://localhost:3000/api/analytics/participants');
+        $response = Http::get('https://programing-olympiad.ddns.net:3000/api/analytics/participants');
         $data = $response->json();
 
         if (!$response->successful() || !$data['success']) {
@@ -105,7 +105,7 @@ class AnalyticsController extends Controller
 
     public function tests()
     {
-        $response = Http::get('http://localhost:3000/api/analytics/tests');
+        $response = Http::get('https://programing-olympiad.ddns.net:3000/api/analytics/tests');
         $data = $response->json();
 
         if (!$response->successful() || !$data['success']) {

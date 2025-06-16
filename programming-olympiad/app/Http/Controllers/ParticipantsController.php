@@ -43,7 +43,6 @@ class ParticipantsController extends Controller
             'filters' => FilterController::getParticipantFilters(),
             'routeName' => 'participants.moreDetails'
         ]);
-
     }
     public function showParticipant($id)
     {

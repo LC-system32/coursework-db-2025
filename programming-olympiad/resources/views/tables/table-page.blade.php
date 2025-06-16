@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const id = row.data('id');
 
             $.ajax({
-                url: `http://localhost:3000/${tableName}/${id}`,
+                url: `https://programing-olympiad.ddns.net:3000/${tableName}/${id}`,
                 method: 'DELETE',
                 success: () => {
                     table.row(row).remove().draw();
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             $.ajax({
-                url: `http://localhost:3000/${tableName}/${id}`,
+                url: `https://programing-olympiad.ddns.net:3000/${tableName}/${id}`,
                 method: 'PUT',
                 contentType: 'application/json',
                 data: JSON.stringify(data),
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             $.ajax({
-                url: `http://localhost:3000/${tableName}`,
+                url: `https://programing-olympiad.ddns.net:3000/${tableName}`,
                 method: 'POST',
                 contentType: 'application/json',
                 data: JSON.stringify(data),
